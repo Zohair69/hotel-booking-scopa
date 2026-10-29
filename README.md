@@ -29,10 +29,10 @@ hotel-booking-scopa/
     01_exploration_preparation.ipynb   exploration, qualité, nettoyage, visualisations
     02_modelisation.ipynb              3 modèles comparés, réglages, modèle final
     03_regle_100_reservations.ipynb    règle de priorisation des 100 réservations
+    04_test_parametres.ipynb           tests de robustesse : random_state et GridSearchCV
   docs/
-    dictionnaire_colonnes.pdf       description des colonnes (Mouna)
-  livrables/
-    synthese_metier.pdf             synthèse 2 pages
+    dictionnaire_colonnes.pdf       description des colonnes
+    synthese_metier.pdf             synthèse métier (2 pages)
     presentation.pdf                support de la soutenance
 ```
 
@@ -54,12 +54,13 @@ hotel-booking-scopa/
 4. Exécuter les notebooks **dans l'ordre** (Run > Run All Cells) :
    - `01_exploration_preparation.ipynb` : crée `data/hotel_bookings_clean.csv` ;
    - `02_modelisation.ipynb` ;
-   - `03_regle_100_reservations.ipynb`.
+   - `03_regle_100_reservations.ipynb` ;
+   - `04_test_parametres.ipynb` (facultatif, quelques minutes de calcul).
 5. Partie SQL, depuis la racine du dépôt :
    ```
    python sql/create_load.py
    ```
-   Le script crée `data/hotels.db` et affiche le nombre de réservations avant et après nettoyage. Ensuite, ouvrir `data/hotels.db` avec un outil SQLite (par exemple DB Browser for SQLite) et exécuter `sql/requetes_metier.sql`.
+   Le script crée `data/hotels.db` et affiche le nombre de réservations avant et après nettoyage. Ensuite, ouvrir `data/hotels.db` avec un outil SQLite (nous avons utilisé DBeaver) et exécuter `sql/requetes_metier.sql`.
 
 ## Nettoyage des données
 
